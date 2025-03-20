@@ -19,7 +19,7 @@
 
 Склонируйте репозиторий:
 ```
-git@github.com:Loriveki/test-task.git
+https://github.com/Loriveki/test-task.git
 ```
 
 Откройте index.html в браузере.
