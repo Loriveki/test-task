@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Метатеги для кодировки и масштабирования страницы на мобильных устройствах -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мои поездки</title>
+    <!-- Подключение стилей для страницы -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Шапка сайта -->
+    <header class="header">
+      <nav>
+        <ul class="theme-menu__list">
+          <li>
+            <!-- Кнопка для перехода на раздел "Поездки" -->
+            <button type="button" class="theme-menu__button">Поездки</button>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__user">
+        <span>Заболоцкий К.О </span>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.5083 9.99327C10.5079 9.95054 10.524 9.90934 10.5531 9.87814L11.411 9.02023L12.2645 8.16668H11.0574H6.00008C5.95588 8.16668 5.91349 8.14912 5.88223 8.11786C5.85097 8.08661 5.83341 8.04421 5.83341 8.00001C5.83341 7.95581 5.85097 7.91342 5.88223 7.88216C5.91349 7.8509 5.95588 7.83334 6.00008 7.83334H11.0574H12.2645L11.411 6.97979L10.549 6.11779L10.549 6.11774L10.5428 6.1117C10.5269 6.09632 10.5142 6.07793 10.5054 6.0576C10.4967 6.03727 10.4921 6.0154 10.4919 5.99327C10.4917 5.97114 10.4959 5.94919 10.5043 5.92871C10.5127 5.90822 10.5251 5.88962 10.5407 5.87397C10.5564 5.85832 10.575 5.84594 10.5954 5.83756C10.6159 5.82918 10.6379 5.82497 10.66 5.82516C10.6821 5.82535 10.704 5.82995 10.7243 5.83868C10.7447 5.84742 10.7631 5.86011 10.7784 5.87603L10.7784 5.87609L10.7845 5.88223L12.7845 7.88218C12.7845 7.88219 12.7845 7.88221 12.7845 7.88223C12.8157 7.91348 12.8333 7.95584 12.8333 8.00001C12.8333 8.04418 12.8157 8.08654 12.7845 8.11779C12.7845 8.11781 12.7845 8.11783 12.7845 8.11784L10.7886 10.1137C10.7574 10.1428 10.7162 10.1588 10.6735 10.1585C10.6298 10.1581 10.588 10.1406 10.5571 10.1097C10.5262 10.0788 10.5087 10.037 10.5083 9.99327ZM3.21556 3.88216C3.24682 3.8509 3.28921 3.83334 3.33341 3.83334C3.37762 3.83334 3.42001 3.8509 3.45127 3.88216C3.48252 3.91342 3.50008 3.95581 3.50008 4.00001V12C3.50008 12.0442 3.48252 12.0866 3.45127 12.1179C3.42001 12.1491 3.37762 12.1667 3.33341 12.1667C3.28921 12.1667 3.24682 12.1491 3.21556 12.1179C3.18431 12.0866 3.16675 12.0442 3.16675 12V4.00001C3.16675 3.95581 3.18431 3.91342 3.21556 3.88216Z"
+            fill="#252C32"
+            stroke="#0E73F6"
+          />
+        </svg>
+      </div>
+    </header>
+    <!-- Раздел "Меню" -->
+    <section class="menu">
+      <h2 class="menu__title">Мои поездки</h2>
+      <!-- Кнопка для оформления новой поездки -->
+      <button class="menu__button">
+        <svg
+          width="10"
+          height="10"
+          viewBox="0 0 10 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M5 0C5.26522 0 5.51957 0.105357 5.70711 0.292893C5.89464 0.48043 6 0.734784 6 1V4H9C9.26522 4 9.51957 4.10536 9.70711 4.29289C9.89464 4.48043 10 4.73478 10 5C10 5.26522 9.89464 5.51957 9.70711 5.70711C9.51957 5.89464 9.26522 6 9 6H6V9C6 9.26522 5.89464 9.51957 5.70711 9.70711C5.51957 9.89464 5.26522 10 5 10C4.73478 10 4.48043 9.89464 4.29289 9.70711C4.10536 9.51957 4 9.26522 4 9V6H1C0.734784 6 0.48043 5.89464 0.292893 5.70711C0.105357 5.51957 0 5.26522 0 5C0 4.73478 0.105357 4.48043 0.292893 4.29289C0.48043 4.10536 0.734784 4 1 4H4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0Z"
+            fill="white"
+          />
+        </svg>
+        Оформить поездку
+      </button>
+    </section>
+    <!-- Раздел с фильтром -->
+    <section class="filter">
+      <!-- Поле выбора начала периода -->
+      <label>Период с:</label>
+      <div class="filter__wrapper">
+        <input type="date" class="filter__input" value="2024-02-22" />
+        <span class="calendar-icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M6.29303 6.293C6.48056 6.10553 6.73487 6.00021 7.00003 6.00021C7.26519 6.00021 7.5195 6.10553 7.70703 6.293L12 10.586L16.293 6.293C16.3853 6.19749 16.4956 6.12131 16.6176 6.0689C16.7396 6.01649 16.8709 5.9889 17.0036 5.98775C17.1364 5.9866 17.2681 6.0119 17.391 6.06218C17.5139 6.11246 17.6255 6.18671 17.7194 6.28061C17.8133 6.3745 17.8876 6.48615 17.9379 6.60905C17.9881 6.73194 18.0134 6.86362 18.0123 6.9964C18.0111 7.12918 17.9835 7.2604 17.9311 7.38241C17.8787 7.50441 17.8025 7.61475 17.707 7.707L13.414 12L17.707 16.293C17.8892 16.4816 17.99 16.7342 17.9877 16.9964C17.9854 17.2586 17.8803 17.5094 17.6948 17.6948C17.5094 17.8802 17.2586 17.9854 16.9964 17.9877C16.7342 17.99 16.4816 17.8892 16.293 17.707L12 13.414L7.70703 17.707C7.51843 17.8892 7.26583 17.99 7.00363 17.9877C6.74143 17.9854 6.49062 17.8802 6.30521 17.6948C6.1198 17.5094 6.01463 17.2586 6.01236 16.9964C6.01008 16.7342 6.11087 16.4816 6.29303 16.293L10.586 12L6.29303 7.707C6.10556 7.51947 6.00024 7.26517 6.00024 7C6.00024 6.73484 6.10556 6.48053 6.29303 6.293Z"
+              fill="#B0BABF"
+            />
+          </svg>
+        </span>
+        <span class="clear-icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8 4C7.73478 4 7.48043 4.10536 7.29289 4.29289C7.10536 4.48043 7 4.73478 7 5V6H6C5.46957 6 4.96086 6.21071 4.58579 6.58579C4.21071 6.96086 4 7.46957 4 8V18C4 18.5304 4.21071 19.0391 4.58579 19.4142C4.96086 19.7893 5.46957 20 6 20H18C18.5304 20 19.0391 19.7893 19.4142 19.4142C19.7893 19.0391 20 18.5304 20 18V8C20 7.46957 19.7893 6.96086 19.4142 6.58579C19.0391 6.21071 18.5304 6 18 6H17V5C17 4.73478 16.8946 4.48043 16.7071 4.29289C16.5196 4.10536 16.2652 4 16 4C15.7348 4 15.4804 4.10536 15.2929 4.29289C15.1054 4.48043 15 4.73478 15 5V6H9V5C9 4.73478 8.89464 4.48043 8.70711 4.29289C8.51957 4.10536 8.26522 4 8 4ZM8 9C7.73478 9 7.48043 9.10536 7.29289 9.29289C7.10536 9.48043 7 9.73478 7 10C7 10.2652 7.10536 10.5196 7.29289 10.7071C7.48043 10.8946 7.73478 11 8 11H16C16.2652 11 16.5196 10.8946 16.7071 10.7071C16.8946 10.5196 17 10.2652 17 10C17 9.73478 16.8946 9.48043 16.7071 9.29289C16.5196 9.10536 16.2652 9 16 9H8Z"
+              fill="#B0BABF"
+            />
+          </svg>
+        </span>
+      </div>
+      <!-- Поле выбора конца периода -->
+      <label>по:</label>
+      <div class="filter__wrapper">
+        <input type="date" class="filter__input calendar" />
+        <span class="placeholder"></span>
+        <span class="clear-icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8 4C7.73478 4 7.48043 4.10536 7.29289 4.29289C7.10536 4.48043 7 4.73478 7 5V6H6C5.46957 6 4.96086 6.21071 4.58579 6.58579C4.21071 6.96086 4 7.46957 4 8V18C4 18.5304 4.21071 19.0391 4.58579 19.4142C4.96086 19.7893 5.46957 20 6 20H18C18.5304 20 19.0391 19.7893 19.4142 19.4142C19.7893 19.0391 20 18.5304 20 18V8C20 7.46957 19.7893 6.96086 19.4142 6.58579C19.0391 6.21071 18.5304 6 18 6H17V5C17 4.73478 16.8946 4.48043 16.7071 4.29289C16.5196 4.10536 16.2652 4 16 4C15.7348 4 15.4804 4.10536 15.2929 4.29289C15.1054 4.48043 15 4.73478 15 5V6H9V5C9 4.73478 8.89464 4.48043 8.70711 4.29289C8.51957 4.10536 8.26522 4 8 4ZM8 9C7.73478 9 7.48043 9.10536 7.29289 9.29289C7.10536 9.48043 7 9.73478 7 10C7 10.2652 7.10536 10.5196 7.29289 10.7071C7.48043 10.8946 7.73478 11 8 11H16C16.2652 11 16.5196 10.8946 16.7071 10.7071C16.8946 10.5196 17 10.2652 17 10C17 9.73478 16.8946 9.48043 16.7071 9.29289C16.5196 9.10536 16.2652 9 16 9H8Z"
+              fill="#B0BABF"
+            />
+          </svg>
+        </span>
+      </div>
+      <!-- Поле поиска -->
+      <div class="filter__wrapper">
+        <input
+          type="text"
+          class="filter__input search"
+          placeholder="Поиск..."
+        />
+        <span class="search-icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10 6.00077C8.93913 6.00077 7.92172 6.42219 7.17157 7.17234C6.42143 7.92248 6 8.9399 6 10.0008C6 11.0616 6.42143 12.079 7.17157 12.8292C7.92172 13.5793 8.93913 14.0008 10 14.0008C11.0609 14.0008 12.0783 13.5793 12.8284 12.8292C13.5786 12.079 14 11.0616 14 10.0008C14 8.9399 13.5786 7.92248 12.8284 7.17234C12.0783 6.42219 11.0609 6.00077 10 6.00077ZM4 10.0008C3.99988 9.05647 4.22264 8.12548 4.65017 7.28351C5.0777 6.44154 5.69792 5.71236 6.4604 5.15529C7.22287 4.59822 8.10606 4.22898 9.03815 4.0776C9.97023 3.92622 10.9249 3.99698 11.8245 4.28412C12.724 4.57126 13.5432 5.06667 14.2152 5.73006C14.8872 6.39346 15.3931 7.2061 15.6919 8.1019C15.9906 8.9977 16.0737 9.95136 15.9343 10.8853C15.795 11.8193 15.4372 12.7072 14.89 13.4768L19.707 18.2938C19.8892 18.4824 19.99 18.735 19.9877 18.9972C19.9854 19.2594 19.8802 19.5102 19.6948 19.6956C19.5094 19.881 19.2586 19.9862 18.9964 19.9884C18.7342 19.9907 18.4816 19.8899 18.293 19.7078L13.477 14.8918C12.5794 15.53 11.5233 15.9089 10.4247 15.9869C9.326 16.0648 8.22707 15.8389 7.2483 15.3337C6.26953 14.8286 5.44869 14.0638 4.87572 13.1231C4.30276 12.1824 3.99979 11.1022 4 10.0008Z"
+              fill="#B0BABF"
+            />
+          </svg>
+        </span>
+      </div>
+      <!-- Кнопка очистки фильтров -->
+      <button class="filter__button">
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M7.99997 9.414L4.70697 12.707L3.29297 11.293L6.58597 8L3.29297 4.707L4.70697 3.293L7.99997 6.586L11.293 3.293L12.707 4.707L9.41397 8L12.707 11.293L11.293 12.707L7.99997 9.414Z"
+            fill="#4094F7"
+          />
+        </svg>
+        Сбросить все
+      </button>
+      <!-- Чекбокс -->
+      <div class="filter__checkbox">
+        <label>
+          <input type="checkbox" />
+          Показать архивные поездки
+        </label>
+      </div>
+    </section>
+    <!-- Прогресс-бар для отображения статуса -->
+    <div class="progress-bar">
+      <div class="progress-bar__fill" style="width: 25%"></div>
+    </div>
+    <!-- Основной блок с информацией о поездках -->
+    <main class="trips">
+      <!-- Первая поездка -->
+      <div class="trip">
+        <!-- Столбец с номером поездки -->
+        <div class="trip__column">
+          <span class="trip__title">№ поездки</span>
+          <span class="trip__content trip__id">000115</span>
+        </div>
+        <!-- Столбец с датами поездки -->
+        <div class="trip__column trip__dates">
+          <span class="trip__title">Дата поездки</span>
+          <span class="trip__content">22.02.2024 - 27.02.2024</span>
+        </div>
+        <!-- Столбец с планируемой суммой -->
+        <div class="trip__column">
+          <span class="trip__title">Сумма, план</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <!-- Столбец с фактической суммой -->
+        <div class="trip__column trip__actual-amount">
+          <span class="trip__title">Сумма, факт</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <!-- Столбец с городами -->
+        <div class="trip__column trip__cities">
+          <span class="trip__title">Город</span>
+          <span class="trip__content">Москва, Ярославль, Ижевск, Владимир</span>
+        </div>
+        <!-- Столбец с кнопкой для статуса -->
+        <div class="trip__column trip__status">
+          <span class="trip__title">Статус</span>
+          <button class="trip__button">Документы</button>
+        </div>
+      </div>
+      <!-- Вторая поездка -->
+      <div class="trip">
+        <div class="trip__column">
+          <span class="trip__title">№ поездки</span>
+          <span class="trip__content trip__id">000117</span>
+        </div>
+        <div class="trip__column trip__dates">
+          <span class="trip__title">Дата поездки</span>
+          <span class="trip__content">22.02.2024 - 27.02.2024</span>
+        </div>
+        <div class="trip__column">
+          <span class="trip__title">Сумма, план</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <div class="trip__column trip__actual-amount">
+          <span class="trip__title">Сумма, факт</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <div class="trip__column trip__cities">
+          <span class="trip__title">Город</span>
+          <span class="trip__content">Москва</span>
+        </div>
+        <div class="trip__column trip__status">
+          <span class="trip__title">Статус</span>
+          <button class="trip__button">Документы</button>
+        </div>
+      </div>
+      <!-- Третья поездка -->
+      <div class="trip">
+        <div class="trip__column">
+          <span class="trip__title">№ поездки</span>
+          <span class="trip__content trip__id">000074</span>
+        </div>
+        <div class="trip__column trip__dates">
+          <span class="trip__title">Дата поездки</span>
+          <span class="trip__content">22.02.2024 - 27.02.2024</span>
+        </div>
+        <div class="trip__column">
+          <span class="trip__title">Сумма, план</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <div class="trip__column trip__actual-amount">
+          <span class="trip__title">Сумма, факт</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+
+        <div class="trip__column trip__cities">
+          <span class="trip__title">Город</span>
+          <div class="trip__content-wrapper">
+            <span class="trip__content trip__content_type_cities">
+              Кременчуг-Константиновское, Петропавловск-Камчатский, Новосибирск,
+              Волгоград
+            </span>
+            <div class="info-wrapper">
+              <!-- Иконка для отображения информации о городах -->
+              <span aria-label="Информация о городах"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M16 8C16 10.1217 15.1571 12.1566 13.6569 13.6569C12.1566 15.1571 10.1217 16 8 16C5.87827 16 3.84344 15.1571 2.34315 13.6569C0.842855 12.1566 0 10.1217 0 8C0 5.87827 0.842855 3.84344 2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0C10.1217 0 12.1566 0.842855 13.6569 2.34315C15.1571 3.84344 16 5.87827 16 8ZM9 4C9 4.26522 8.89464 4.51957 8.70711 4.70711C8.51957 4.89464 8.26522 5 8 5C7.73478 5 7.48043 4.89464 7.29289 4.70711C7.10536 4.51957 7 4.26522 7 4C7 3.73478 7.10536 3.48043 7.29289 3.29289C7.48043 3.10536 7.73478 3 8 3C8.26522 3 8.51957 3.10536 8.70711 3.29289C8.89464 3.48043 9 3.73478 9 4ZM7 7C6.73478 7 6.48043 7.10536 6.29289 7.29289C6.10536 7.48043 6 7.73478 6 8C6 8.26522 6.10536 8.51957 6.29289 8.70711C6.48043 8.89464 6.73478 9 7 9V12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H9C9.26522 13 9.51957 12.8946 9.70711 12.7071C9.89464 12.5196 10 12.2652 10 12C10 11.7348 9.89464 11.4804 9.70711 11.2929C9.51957 11.1054 9.26522 11 9 11V8C9 7.73478 8.89464 7.48043 8.70711 7.29289C8.51957 7.10536 8.26522 7 8 7H7Z"
+                    fill="#84919A"
+                  />
+                </svg>
+              </span>
+              <!-- Всплывающее описание городов -->
+              <span class="tooltip"
+                >Кременчуг-Константиновское, Петропавловск-Камчатский,
+                Новосибирск, Волгоград, Саратов</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="trip__column trip__status">
+          <span class="trip__title">Статус</span>
+          <button class="trip__button">Документы</button>
+        </div>
+      </div>
+      <!-- Четвертая поездка -->
+      <div class="trip">
+        <div class="trip__column">
+          <span class="trip__title">№ поездки</span>
+          <span class="trip__content trip__id">000115</span>
+        </div>
+        <div class="trip__column trip__dates">
+          <span class="trip__title">Дата поездки</span>
+          <span class="trip__content">22.02.2024 - 27.02.2024</span>
+        </div>
+        <div class="trip__column">
+          <span class="trip__title">Сумма, план</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <div class="trip__column trip__actual-amount">
+          <span class="trip__title">Сумма, факт</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <div class="trip__column trip__cities">
+          <span class="trip__title">Город</span>
+          <span class="trip__content">Москва, Ярославль, Ижевск, Владимир</span>
+        </div>
+        <div class="trip__column trip__status">
+          <span class="trip__title">Статус</span>
+          <button class="trip__button">Документы</button>
+        </div>
+      </div>
+      <!-- Пятая поездка -->
+      <div class="trip">
+        <div class="trip__column">
+          <span class="trip__title">№ поездки</span>
+          <span class="trip__content trip__id">000211</span>
+        </div>
+        <div class="trip__column trip__dates">
+          <span class="trip__title">Дата поездки</span>
+          <span class="trip__content">22.02.2024 - 27.02.2024</span>
+        </div>
+        <div class="trip__column">
+          <span class="trip__title">Сумма, план</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <div class="trip__column trip__actual-amount">
+          <span class="trip__title">Сумма, факт</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <div class="trip__column trip__cities">
+          <span class="trip__title">Город</span>
+          <span class="trip__content">Москва, Ярославль, Ижевск, Владимир</span>
+        </div>
+        <div class="trip__column trip__status">
+          <span class="trip__title">Статус</span>
+          <button class="trip__button">Документы</button>
+        </div>
+      </div>
+      <!-- Шестая поездка -->
+      <div class="trip">
+        <div class="trip__column">
+          <span class="trip__title">№ поездки</span>
+          <span class="trip__content trip__id">000118</span>
+        </div>
+        <div class="trip__column trip__dates">
+          <span class="trip__title">Дата поездки</span>
+          <span class="trip__content">22.02.2024 - 27.02.2024</span>
+        </div>
+        <div class="trip__column">
+          <span class="trip__title">Сумма, план</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <div class="trip__column trip__actual-amount">
+          <span class="trip__title">Сумма, факт</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <div class="trip__column trip__cities">
+          <span class="trip__title">Город</span>
+          <span class="trip__content">Москва, Ярославль, Ижевск, Владимир</span>
+        </div>
+        <div class="trip__column trip__status">
+          <span class="trip__title">Статус</span>
+          <button class="trip__button">Документы</button>
+        </div>
+      </div>
+      <!-- Седбмая поездка -->
+      <div class="trip">
+        <div class="trip__column">
+          <span class="trip__title">№ поездки</span>
+          <span class="trip__content trip__id">000119</span>
+        </div>
+        <div class="trip__column trip__dates">
+          <span class="trip__title">Дата поездки</span>
+          <span class="trip__content">22.02.2024 - 27.02.2024</span>
+        </div>
+        <div class="trip__column">
+          <span class="trip__title">Сумма, план</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <div class="trip__column trip__actual-amount">
+          <span class="trip__title">Сумма, факт</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <div class="trip__column trip__cities">
+          <span class="trip__title">Город</span>
+          <span class="trip__content">Москва, Ярославль, Ижевск, Владимир</span>
+        </div>
+        <div class="trip__column trip__status">
+          <span class="trip__title">Статус</span>
+          <button class="trip__button">Документы</button>
+        </div>
+      </div>
+      <!-- Восьмая поездка -->
+      <div class="trip">
+        <div class="trip__column">
+          <span class="trip__title">№ поездки</span>
+          <span class="trip__content trip__id">000120</span>
+        </div>
+        <div class="trip__column trip__dates">
+          <span class="trip__title">Дата поездки</span>
+          <span class="trip__content">22.02.2024 - 27.02.2024</span>
+        </div>
+        <div class="trip__column">
+          <span class="trip__title">Сумма, план</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <div class="trip__column trip__actual-amount">
+          <span class="trip__title">Сумма, факт</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <div class="trip__column trip__cities">
+          <span class="trip__title">Город</span>
+          <span class="trip__content">Москва, Ярославль, Ижевск, Владимир</span>
+        </div>
+        <div class="trip__column trip__status">
+          <span class="trip__title">Статус</span>
+          <button class="trip__button">Документы</button>
+        </div>
+      </div>
+      <!-- Девятая поездка -->
+      <div class="trip">
+        <div class="trip__column">
+          <span class="trip__title">№ поездки</span>
+          <span class="trip__content trip__id">000133</span>
+        </div>
+        <div class="trip__column trip__dates">
+          <span class="trip__title">Дата поездки</span>
+          <span class="trip__content">22.02.2024 - 27.02.2024</span>
+        </div>
+        <div class="trip__column">
+          <span class="trip__title">Сумма, план</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <div class="trip__column trip__actual-amount">
+          <span class="trip__title">Сумма, факт</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <div class="trip__column trip__cities">
+          <span class="trip__title">Город</span>
+          <span class="trip__content">Москва, Ярославль, Ижевск, Владимир</span>
+        </div>
+        <div class="trip__column trip__status">
+          <span class="trip__title">Статус</span>
+          <button class="trip__button">Документы</button>
+        </div>
+      </div>
+      <!-- Десятая поездка -->
+      <div class="trip">
+        <div class="trip__column">
+          <span class="trip__title">№ поездки</span>
+          <span class="trip__content trip__id">000133</span>
+        </div>
+        <div class="trip__column trip__dates">
+          <span class="trip__title">Дата поездки</span>
+          <span class="trip__content">22.02.2024 - 27.02.2024</span>
+        </div>
+        <div class="trip__column">
+          <span class="trip__title">Сумма, план</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <div class="trip__column trip__actual-amount">
+          <span class="trip__title">Сумма, факт</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <div class="trip__column trip__cities">
+          <span class="trip__title">Город</span>
+          <span class="trip__content">Москва, Ярославль, Ижевск, Владимир</span>
+        </div>
+        <div class="trip__column trip__status">
+          <span class="trip__title">Статус</span>
+          <button class="trip__button">Документы</button>
+        </div>
+      </div>
+      <!-- Одиннадцатая поездка -->
+      <div class="trip">
+        <div class="trip__column">
+          <span class="trip__title">№ поездки</span>
+          <span class="trip__content trip__id">000133</span>
+        </div>
+        <div class="trip__column trip__dates">
+          <span class="trip__title">Дата поездки</span>
+          <span class="trip__content">22.02.2024 - 27.02.2024</span>
+        </div>
+        <div class="trip__column">
+          <span class="trip__title">Сумма, план</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <div class="trip__column trip__actual-amount">
+          <span class="trip__title">Сумма, факт</span>
+          <span class="trip__content trip__amount">29 400,00</span>
+        </div>
+        <div class="trip__column trip__cities">
+          <span class="trip__title">Город</span>
+          <span class="trip__content">Москва, Ярославль, Ижевск, Владимир</span>
+        </div>
+        <div class="trip__column trip__status">
+          <span class="trip__title">Статус</span>
+          <button class="trip__button">Документы</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
