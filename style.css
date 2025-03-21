@@ -25,6 +25,8 @@ body {
   align-items: center;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12);
   padding: 4px 16px;
+  z-index: 10;
+  position: relative;
 }
 
 /* Стили для меню в шапке */
@@ -330,7 +332,7 @@ main::-webkit-scrollbar-track {
 
 /* Стиль для hover эффекта на поездке */
 .trip:hover {
-  border: 1px solid #9bcffd;
+  outline: 1px solid #9bcffd; 
 }
 
 /* Стили для колонок в поездке */
